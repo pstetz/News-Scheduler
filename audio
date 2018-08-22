@@ -54,8 +54,6 @@ def delete_old_audio(new_filename, file_prefix):
 	for filename in files:
 		if os.path.isdir(filename):
 			continue
-		print(filename)
-		print(new_filename)
 		if file_prefix in filename and filename != new_filename:
 			os.remove(filename)
 
@@ -95,5 +93,3 @@ def main():
 
 if __name__ == "__main__":
 	main()
-
-print("Finished")
