@@ -21,7 +21,7 @@ def url_valid(url):
 
 	The motivation is to see if the new program has been uploaded
 	"""
-	
+	print(url)
 	request = requests.get(url)
 	return request.status_code == 200
 
@@ -73,7 +73,7 @@ def get_program():
 	return program
 
 def main():
-	day       = time.strftime("%B-%d-%Y").lower()
+	day       = time.strftime("%B-%-d-%Y").lower()
 	directory = os.path.expanduser('~') + "/Desktop"
 	file_prefix  = "PBS_Newshour"
 	new_filename = f"{directory}/{file_prefix}_{day}.mp3"
