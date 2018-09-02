@@ -21,7 +21,6 @@ def url_valid(url):
 
 	The motivation is to see if the new program has been uploaded
 	"""
-	print(url)
 	request = requests.get(url)
 	return request.status_code == 200
 
